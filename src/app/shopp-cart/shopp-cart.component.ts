@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { prodact } from '../produit';
 
 @Component({
   selector: 'app-shopp-cart',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./shopp-cart.component.css']
 })
 export class ShoppCartComponent implements OnInit {
+
+  prodactList = prodact;
 
   constructor() { }
 
