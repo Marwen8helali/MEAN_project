@@ -16,6 +16,7 @@ const routes:Routes=[
   { path: 'home' , component: HomeComponent},
   { path: '' , redirectTo:'/home' , pathMatch:'full'},
   { path: 'menu', loadChildren: () => import('./shopp-cart/shopp-cart.module').then(m => m.ShoppCartModule) },
+  { path: 'menu_cafe', loadChildren: () => import('./menu/menu.module').then(m => m.MenuModule) },
   { path: '**' , component: NotFoundComponent}
 ];
 
