@@ -3,13 +3,16 @@
     <div *ngFor = "let prodact of prodactList" class="col-md-4 py-3">
 
         <div class="card py-1" style="width: 18rem; height: 24rem;">
-            <img src="assets/imgcafe/{{prodact.imge}}" class="card-img-top"  alt="{{prodact.prodName}}"/>
-            <div class="card-body">
-              <h5 class="card-title" title="more detais about this">{{prodact.prodName}} </h5>
+          <div class="img-card-top"  
+            style="background-image:url(../../assets/imgcafe/{{prodact.imge}}.jpg)" >
+          </div>
+            
+          <div class="card-body">
+            <h5 class="card-title" title="more detais about this">{{prodact.prodName}} </h5>
 
-              <p class="card-text"> <strong *ngIf="prodact.description"> Description : </strong>{{prodact.description | slice:0:200}} [..]</p>
-              <a src=" " class="btn btn-primary" >Details</a>
-            </div>
+            <p class="card-text"> <strong *ngIf="prodact.description"> Description : </strong>{{prodact.description | slice:0:50}} [..]</p>
+            <a src=" " class="btn btn-primary" >Details</a>
+          </div>
           </div>
     </div>
 </div>

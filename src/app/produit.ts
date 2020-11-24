@@ -2,7 +2,7 @@ export const prodact = [
     {
         prodName: "Café noisette",
         price: 4.2,
-        imge: "Café noisette",
+        imge: "Cafe_noisette",
         description: "Préparation : 1 min Navrée pour les gourmands en quête de saveur insolite mais le café noisette n'est qu'un café auquel a été ajouté une goutte de lai"
     },
     {
@@ -14,7 +14,7 @@ export const prodact = [
     {
         prodName: "Café au lait",
         price: 3.5,
-        imge: "Café au lait",
+        imge: "Cafe_au_lait",
         description: ""
     },
     {
@@ -62,7 +62,7 @@ export const prodact = [
     {
         prodName: "café frappé",
         price: 4.7,
-        imge: "café frappé",
+        imge: "cafe_frappee",
         description: "Le café frappé, très tendance en été, a envahi les cafés branchés des grandes villes.Et pourtant, il n’a pourtant rien de nouveau. Préparé avec du café instantané,"
     },
   
