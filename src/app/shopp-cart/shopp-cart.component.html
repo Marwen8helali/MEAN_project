@@ -1,6 +1,6 @@
 <h1>List produit </h1>
 <div class="row" style="margin-left: 80px;">
-    <div *ngFor = "let prodact of prodactList" class="col-md-4 py-3">
+    <div *ngFor = "let prodact of prodactList; index as productId " class="col-md-4 py-3">
 
         <div class="card py-1" style="width: 18rem; height: 24rem;">
           <div class="img-card-top"  
@@ -11,7 +11,7 @@
             <h5 class="card-title" title="more detais about this">{{prodact.prodName}} </h5>
 
             <p class="card-text"> <strong *ngIf="prodact.description"> Description : </strong>{{prodact.description | slice:0:50}} [..]</p>
-            <a src=" " class="btn btn-primary" >Details</a>
+            <a [routerLink]="['menu/product_detail/',productId ]" class="btn btn-primary" >Details</a>
           </div>
           </div>
     </div>
