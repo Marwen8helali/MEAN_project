@@ -1,15 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-import { products } from "../stock";
+import { ProductService } from "../product.service";
+
 @Component({
-  selector: 'app-menu',
+selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css']
 })
+
 export class MenuComponent implements OnInit {
-  productList = products;
-  constructor() { }
+  productList = null;
+  constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
+    this.productService.readAllProducts().subscribe(
+      (res) => this.productList = res
+    );
   }
 
-}
+  }
+
+

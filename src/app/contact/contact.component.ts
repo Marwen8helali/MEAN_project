@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, FormBuilder,ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -6,10 +7,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
+  message: any;
+  constructor(private formBuilder: FormBuilder) { 
+    this.message = this.formBuilder.group({
+      Name: [''],
+      Email: [''],
+      phone: [''],
+      message:['']
+    });
 
-  constructor() { }
+  }
 
   ngOnInit(): void {
+  }
+  
+
+  onSubmitForm() {
+    
+    console.log(this.message.value);
+  
   }
 
 }
