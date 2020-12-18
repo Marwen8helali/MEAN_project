@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { StorageService } from '../storage.service'
-
+import { CommandehttpService } from '../commandehttp.service'
 @Component({
   selector: 'app-shopp-cart',
   templateUrl: './shopp-cart.component.html',
@@ -10,7 +10,9 @@ export class ShoppCartComponent implements OnInit {
 commandeContent;
 totalPrice = 0;
 TAX_RATE = 0.2;
-  constructor(private storage: StorageService) { }
+commander;
+
+  constructor(private storage: StorageService,private commande:CommandehttpService) { }
 
   ngOnInit(): void {
    this.commandeContent=this.storage.loadFromLocalStorage();
@@ -28,6 +30,10 @@ TAX_RATE = 0.2;
     this.storage.clearLocalStorage();
     this.ngOnInit();
   }
-
+insert(commande){
+  this.commande.createNewProduct(commande).subscribe(
+    (res) =>   console.log("hello")
+  );
+}
   
 }

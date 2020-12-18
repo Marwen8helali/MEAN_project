@@ -3,6 +3,7 @@
   </div>
   <ng-template #elseBlock>
     <button class="btn btn-outline-danger" (click)="clearCart()">
+   
       Clear Cart
     </button>
     <br>
@@ -19,10 +20,11 @@
       <tbody>
         <tr *ngFor="let product of commandeContent;index as i">
           <th scope="row">{{ i+1 }}</th>
-          <td>{{ product.productName }}</td>
+          <td>{{ product.desc }}</td>
           <td>{{ product.quantity }}</td>
           <td>{{ product.price | currency:'TND ' }}</td>
           <td>{{ product.price * product.quantity | currency:'TND ' }}</td>
+      
         </tr>
       </tbody>
       <thead class="thead-light">
@@ -37,6 +39,10 @@
         <tr>
           <th scope="col" colspan="4" class="text-right">Prix TTC : </th>
           <th scope="col">{{ totalPrice + (totalPrice * TAX_RATE) | currency:'TND ' }}</th>
+        </tr>
+        <tr>
+          <th scope="col" colspan="4" class="text-right">  </th>
+          <th scope="col">  <button class="btn btn-outline-info" (click)="insert(commandeContent.value)">Valider</button> </th>
         </tr>
       </thead>
     </table>

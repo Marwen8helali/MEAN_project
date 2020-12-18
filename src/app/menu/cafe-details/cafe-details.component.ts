@@ -11,17 +11,13 @@ import { StorageService } from "../../storage.service";
 export class CafeDetailsComponent implements OnInit {
   product;
   commandeContent;
-  constructor(private route: ActivatedRoute, private commandeService: CommandeService , private storage: StorageService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe(params => {
-      this.product = products[params.get('id')]
-    });
-this.commandeContent=this.storage.loadFromLocalStorage();
-  }
- addToCommande(prod,commande){
-this.commandeService.addToCommande(prod,this.commandeContent);
-  }
-  
+   
+    }
 
-}
+  }
+ 
+
+

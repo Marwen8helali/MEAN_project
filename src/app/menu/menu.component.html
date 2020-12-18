@@ -14,28 +14,28 @@
  				<div class="container">
 					<div class="dlab-tabs menu-tabs style1">
 						<ul class="nav nav-tabs">
-							<li><a data-toggle="tab" href="#coffee" class="active"> 
+							<li><a data-toggle="tab" href="#coffee"  (click)="selectCategory('Coffee')" > 
 								<div class="icon-bx">
 									<img src="/assets/images/icons/icon8.png" alt="">
 								</div>
 								<h4>COFFEE</h4>
 								<h6>COFFEE & CAPPUCCINO</h6>
 							</a></li>
-							<li><a data-toggle="tab" href="#lunch"> 
+							<li><a data-toggle="tab" href="#lunch"  (click)="selectCategory('Dinner')"> 
 								<div class="icon-bx">
 									<img src="/assets/images/icons/icon5.png" alt="">
 								</div>
 								<h4>LUNCH</h4>
 								<h6>COFFEE & CAPPUCCINO</h6>
 							</a></li>
-							<li><a data-toggle="tab" href="#diner"> 
+							<li><a data-toggle="tab" href="#diner" (click)="selectCategory('Lunch')"> 
 								<div class="icon-bx">
 									<img src="/assets/images/icons/icon6.png" alt="">
 								</div>
 								<h4>DINER</h4>
 								<h6>COFFEE & CAPPUCCINO</h6>
 							</a></li>
-							<li><a data-toggle="tab" href="#drinks"> 
+							<li><a data-toggle="tab" href="#drinks" (click)="selectCategory('Boisson')" > 
 								<div class="icon-bx">
 									<img src="/assets/images/icons/icon7.png" alt="">
 								</div>
@@ -47,104 +47,14 @@
 							<div id="coffee" class="tab-pane active">
 								<div class="menu-box">
 									<ul class="menu-list">
-										<li>
+										<li *ngFor="let product of products">
 											<div class="item-left">
 												<img src="/assets/images/cup/cup1.png" alt=""/>
-												<h4 class="title">Single Cup Brew</h4>
-												<p class="description">Lorem ipsum dolor sit amet consectetur adipiscing</p>
+												<h4 class="title">{{product.desc}}  <i class="fas fa-cart-plus" (click)="addToCommande(product)"></i></h4>
+												<p class="description">{{product.designation}}</p>
 											</div>
 											<div class="item-right">
-												<h5 class="price">$4.50</h5>
-											</div>
-										</li>
-										<li>
-											<div class="item-left">
-												<img src="/assets/images/cup/cup2.png" alt=""/>
-												<h4 class="title">Black Eyed Andy</h4>
-												<p class="description">Lorem ipsum dolor sit amet consectetur adipiscing</p>
-											</div>
-											<div class="item-right">
-												<h5 class="price">$4.99</h5>
-											</div>
-										</li>
-										<li>
-											<div class="item-left">
-												<img src="/assets/images/cup/cup3.png" alt=""/>
-												<h4 class="title">Cuban Shot</h4>
-												<p class="description">Lorem ipsum dolor sit amet consectetur adipiscing</p>
-											</div>
-											<div class="item-right">
-												<h5 class="price">$2.55</h5>
-											</div>
-										</li>
-										<li>
-											<div class="item-left">
-												<img src="/assets/images/cup/cup4.png" alt=""/>
-												<h4 class="title">Cafe au Lait</h4>
-												<p class="description">Lorem ipsum dolor sit amet consectetur adipiscing</p>
-											</div>
-											<div class="item-right">
-												<h5 class="price">$2.55</h5>
-											</div>
-										</li>
-										<li>
-											<div class="item-left">
-												<img src="/assets/images/cup/cup5.png" alt=""/>
-												<h4 class="title">Coffee of the Day</h4>
-												<p class="description">Lorem ipsum dolor sit amet consectetur adipiscing</p>
-											</div>
-											<div class="item-right">
-												<h5 class="price">$2.55</h5>
-											</div>
-										</li>
-										<li>
-											<div class="item-left">
-												<img src="/assets/images/cup/cup6.png" alt=""/>
-												<h4 class="title">Cappuccino</h4>
-												<p class="description">Lorem ipsum dolor sit amet consectetur adipiscing</p>
-											</div>
-											<div class="item-right">
-												<h5 class="price">$2.55</h5>
-											</div>
-										</li>
-										<li>
-											<div class="item-left">
-												<img src="/assets/images/cup/cup7.png" alt=""/>
-												<h4 class="title">Caffé Americano</h4>
-												<p class="description">Lorem ipsum dolor sit amet consectetur adipiscing</p>
-											</div>
-											<div class="item-right">
-												<h5 class="price">$2.55</h5>
-											</div>
-										</li>
-										<li>
-											<div class="item-left">
-												<img src="/assets/images/cup/cup8.png" alt=""/>
-												<h4 class="title">Caramel Macchiato</h4>
-												<p class="description">Lorem ipsum dolor sit amet consectetur adipiscing</p>
-											</div>
-											<div class="item-right">
-												<h5 class="price">$2.55</h5>
-											</div>
-										</li>
-										<li>
-											<div class="item-left">
-												<img src="/assets/images/cup/cup9.png" alt=""/>
-												<h4 class="title">Café Latte</h4>
-												<p class="description">Lorem ipsum dolor sit amet consectetur adipiscing</p>
-											</div>
-											<div class="item-right">
-												<h5 class="price">$2.55</h5>
-											</div>
-										</li>
-										<li>
-											<div class="item-left">
-												<img src="/assets/images/cup/cup1.png" alt=""/>
-												<h4 class="title">Standard black coffee</h4>
-												<p class="description">Lorem ipsum dolor sit amet consectetur adipiscing</p>
-											</div>
-											<div class="item-right">
-												<h5 class="price">$2.55</h5>
+												<h5 class="price">{{product.price}} Dt</h5>
 											</div>
 										</li>
 									</ul>
@@ -156,46 +66,17 @@
 							<div id="lunch" class="tab-pane">
 								<div class="menu-box">
 									<ul class="menu-list">
-										<li>
+                                    <li *ngFor="let product of products">
 											<div class="item-left">
-												<img src="/assets/images/cup/cup2.png" alt=""/>
-												<h4 class="title">Single Cup Brew</h4>
-												<p class="description">Lorem ipsum dolor sit amet consectetur adipiscing</p>
+												<img src="/assets/images/cup/luch.png" alt=""/>
+												<h4 class="title">{{product.desc}}  <i class="fas fa-cart-plus" (click)="addToCommande(product)"></i></h4>
+												<p class="description">{{product.designation}}</p>
 											</div>
 											<div class="item-right">
-												<h5 class="price">$4.50</h5>
+												<h5 class="price">{{product.price}}</h5>
 											</div>
 										</li>
-										<li>
-											<div class="item-left">
-												<img src="/assets/images/cup/cup3.png" alt=""/>
-												<h4 class="title">Black Eyed Andy</h4>
-												<p class="description">Lorem ipsum dolor sit amet consectetur adipiscing</p>
-											</div>
-											<div class="item-right">
-												<h5 class="price">$4.99</h5>
-											</div>
-										</li>
-										<li>
-											<div class="item-left">
-												<img src="/assets/images/cup/cup4.png" alt=""/>
-												<h4 class="title">Cuban Shot</h4>
-												<p class="description">Lorem ipsum dolor sit amet consectetur adipiscing</p>
-											</div>
-											<div class="item-right">
-												<h5 class="price">$2.55</h5>
-											</div>
-										</li>
-										<li>
-											<div class="item-left">
-												<img src="/assets/images/cup/cup5.png" alt=""/>
-												<h4 class="title">Cafe au Lait</h4>
-												<p class="description">Lorem ipsum dolor sit amet consectetur adipiscing</p>
-											</div>
-											<div class="item-right">
-												<h5 class="price">$2.55</h5>
-											</div>
-										</li>
+
 									</ul>
 									<div class="text-center">
 										<a href="#" class="btn bg-secondry">VIEW OUR COMPLETE MENU</a>
@@ -205,66 +86,21 @@
 							<div id="diner" class="tab-pane">
 								<div class="menu-box">
 									<ul class="menu-list">
-										<li>
+										<li *ngFor="let product of products">
 											<div class="item-left">
-												<img src="/assets/images/cup/cup6.png" alt=""/>
-												<h4 class="title">Single Cup Brew</h4>
-												<p class="description">Lorem ipsum dolor sit amet consectetur adipiscing</p>
+												<img src="/assets/images/cup/dinner.png" alt=""/>
+												<h4 class="title">{{product.desc}} <i class="fas fa-cart-plus" (click)="addToCommande(product)"></i></h4>
+												<p class="description">{{product.designation}}</p>
 											</div>
 											<div class="item-right">
-												<h5 class="price">$4.50</h5>
+												<h5 class="price">{{product.price}} DT</h5>
 											</div>
 										</li>
-										<li>
-											<div class="item-left">
-												<img src="/assets/images/cup/cup7.png" alt=""/>
-												<h4 class="title">Black Eyed Andy</h4>
-												<p class="description">Lorem ipsum dolor sit amet consectetur adipiscing</p>
-											</div>
-											<div class="item-right">
-												<h5 class="price">$4.99</h5>
-											</div>
-										</li>
-										<li>
-											<div class="item-left">
-												<img src="/assets/images/cup/cup8.png" alt=""/>
-												<h4 class="title">Cuban Shot</h4>
-												<p class="description">Lorem ipsum dolor sit amet consectetur adipiscing</p>
-											</div>
-											<div class="item-right">
-												<h5 class="price">$2.55</h5>
-											</div>
-										</li>
-										<li>
-											<div class="item-left">
-												<img src="/assets/images/cup/cup9.png" alt=""/>
-												<h4 class="title">Cafe au Lait</h4>
-												<p class="description">Lorem ipsum dolor sit amet consectetur adipiscing</p>
-											</div>
-											<div class="item-right">
-												<h5 class="price">$2.55</h5>
-											</div>
-										</li>
-										<li>
-											<div class="item-left">
-												<img src="/assets/images/cup/cup1.png" alt=""/>
-												<h4 class="title">Coffee of the Day</h4>
-												<p class="description">Lorem ipsum dolor sit amet consectetur adipiscing</p>
-											</div>
-											<div class="item-right">
-												<h5 class="price">$2.55</h5>
-											</div>
-										</li>
-										<li>
-											<div class="item-left">
-												<img src="/assets/images/cup/cup2.png" alt=""/>
-												<h4 class="title">Cappuccino</h4>
-												<p class="description">Lorem ipsum dolor sit amet consectetur adipiscing</p>
-											</div>
-											<div class="item-right">
-												<h5 class="price">$2.55</h5>
-											</div>
-										</li>
+										
+										
+										
+									
+										
 									</ul>
 									<div class="text-center">
 										<a href="#" class="btn bg-secondry">VIEW OUR COMPLETE MENU</a>
@@ -274,66 +110,21 @@
 							<div id="drinks" class="tab-pane">
 								<div class="menu-box">
 									<ul class="menu-list">
-										<li>
+										<li *ngFor="let product of products">
 											<div class="item-left">
-												<img src="/assets/images/cup/cup3.png" alt=""/>
-												<h4 class="title">Single Cup Brew</h4>
-												<p class="description">Lorem ipsum dolor sit amet consectetur adipiscing</p>
-											</div>
+												<img src="/assets/images/cup/image11.png" alt=""/>
+												<h4 class="title">{{product.desc}}   <i class="fas fa-cart-plus" (click)="addToCommande(product)" ></i> </h4>
+												<p class="description">{{product.designation}}</p>
+										    </div>
 											<div class="item-right">
-												<h5 class="price">$4.50</h5>
+												<h5 class="price">{{product.price}} DT</h5>
 											</div>
 										</li>
-										<li>
-											<div class="item-left">
-												<img src="/assets/images/cup/cup4.png" alt=""/>
-												<h4 class="title">Black Eyed Andy</h4>
-												<p class="description">Lorem ipsum dolor sit amet consectetur adipiscing</p>
-											</div>
-											<div class="item-right">
-												<h5 class="price">$4.99</h5>
-											</div>
-										</li>
-										<li>
-											<div class="item-left">
-												<img src="/assets/images/cup/cup5.png" alt=""/>
-												<h4 class="title">Cuban Shot</h4>
-												<p class="description">Lorem ipsum dolor sit amet consectetur adipiscing</p>
-											</div>
-											<div class="item-right">
-												<h5 class="price">$2.55</h5>
-											</div>
-										</li>
-										<li>
-											<div class="item-left">
-												<img src="/assets/images/cup/cup6.png" alt=""/>
-												<h4 class="title">Cafe au Lait</h4>
-												<p class="description">Lorem ipsum dolor sit amet consectetur adipiscing</p>
-											</div>
-											<div class="item-right">
-												<h5 class="price">$2.55</h5>
-											</div>
-										</li>
-										<li>
-											<div class="item-left">
-												<img src="/assets/images/cup/cup7.png" alt=""/>
-												<h4 class="title">Coffee of the Day</h4>
-												<p class="description">Lorem ipsum dolor sit amet consectetur adipiscing</p>
-											</div>
-											<div class="item-right">
-												<h5 class="price">$2.55</h5>
-											</div>
-										</li>
-										<li>
-											<div class="item-left">
-												<img src="/assets/images/cup/cup8.png" alt=""/>
-												<h4 class="title">Cappuccino</h4>
-												<p class="description">Lorem ipsum dolor sit amet consectetur adipiscing</p>
-											</div>
-											<div class="item-right">
-												<h5 class="price">$2.55</h5>
-											</div>
-										</li>
+										
+										
+										
+										
+									
 									</ul>
 									<div class="text-center">
 										<a href="#" class="btn bg-secondry">VIEW OUR COMPLETE MENU</a>

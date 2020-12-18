@@ -8,14 +8,14 @@ export class StorageService {
   constructor() { }
   
   saveToLocalStorage(cartContent) {
-    localStorage.setItem('cafe', JSON.stringify(cartContent));
+    localStorage.setItem('coffees', JSON.stringify(cartContent));
   }
 
   loadFromLocalStorage() {
-    return JSON.parse(localStorage.getItem('cafe')) || [];
+    return JSON.parse(localStorage.getItem('coffees')) || [];
   }
 
   clearLocalStorage() {
-    localStorage.removeItem('cafe');
+    localStorage.removeItem('coffees');
   }
 }

@@ -10,7 +10,7 @@ export class ProductService {
 constructor(private http: HttpClient) { }
 
 
-  private apiUrl = 'http://localhost:3000/products';
+  private apiUrl = 'http://localhost:3000/cofee';
  
   
 
@@ -19,6 +19,14 @@ constructor(private http: HttpClient) { }
    */
   readAllProducts() {
     return this.http.get(this.apiUrl);
+  }
+  
+   /**
+   * Get list by category
+   * * @param cat
+   */
+  readproductByCategory(cat:string) {
+    return this.http.get(this.apiUrl+'/category/'+cat);
   }
 
   /**

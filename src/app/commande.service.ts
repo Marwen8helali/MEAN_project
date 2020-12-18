@@ -16,7 +16,7 @@ commandeContent;
    addToCommande(prod,commande) {
     commande=this.loadFromCommande();
     for (let index = 0; index < commande.length; index++) {
-      if(commande[index].productName == prod.productName) {
+      if(commande[index].desc == prod.desc) {
         commande[index].quantity += 1;
 
         this.storage.saveToLocalStorage(commande);

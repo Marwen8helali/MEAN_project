@@ -22,7 +22,7 @@ const routes:Routes=[
   {path: 'contact', component: ContactComponent},
   {path: 'reservation', component: ReservationComponent},
   {path: 'gallery', component: GalleryComponent},
-  { path: 'menu', loadChildren: () => import('./shopp-cart/shopp-cart.module').then(m => m.ShoppCartModule) },
+  { path: 'listemenu', loadChildren: () => import('./shopp-cart/shopp-cart.module').then(m => m.ShoppCartModule) },
   { path: 'menu_cafe', loadChildren: () => import('./menu/menu.module').then(m => m.MenuModule) },
   {path: '', redirectTo: '/index', pathMatch: 'full'},
 ];
