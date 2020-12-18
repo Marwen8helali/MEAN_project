@@ -1,32 +1,29 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="#">
-        <img src="assets/image/th.jpg" width="30" height="30" class="d-inline-block align-top"  loading="lazy">
-        DigiCafé
-      </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item ">
-          <a class="nav-link" routerLink='home'>Home</a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link" routerLink='about'>about</a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link" routerLink='contact'>contact</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink='menu_cafe'>Menu</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Nouveauté</a>
-          </li>
-      </ul>
-      <button class="btn btn btn-info my-2 my-sm-0" routerLink="/menu">
-        <span class="material-icons">Ordered</span>Checkout
-    </button>
+<div class="sidenav full-page navbar sticky-header onepage content-scroll" id="mySidenav" style="background-image: url(../assets/images/background/bg4.jpg);">
+      <a href="javascript:void(0)" class="closebtn btn">&times;</a>
+      <div class="dlab-sidenav-area">
+        <div class="logo-header mostion"><a routerLink="/index" routerLinkActive="active"><img src="/assets/images/logo.png" width="193" height="89" alt=""></a></div>
+        <div class="clearfix"></div>
+        <div id="myNavbar" >
+          <ul class="nav">
+            <li><a routerLink="/index" routerLinkActive="active" class="nav-link">Home</a></li>
+            <li><a  routerLink="/about" routerLinkActive="active" class="nav-link">about us</a></li>
+            <li><a  routerLink="/menu" routerLinkActive="active" class="nav-link">menu</a></li>
+            <li><a routerLink="/gallery" routerLinkActive="active"class="nav-link">gallery</a></li>
+            <li><a  routerLink="/menudetail" class="nav-link"> commande</a></li>
+            <li><a href="blog.html" class="nav-link">blog</a></li>
+            <li><a  routerLink="/contact" routerLinkActive="active" class="nav-link">contact us</a></li>
+            <li><a  routerLink="/reservation" routerLinkActive="active" class="nav-link">reservation</a></li>
+          </ul>
+        </div>
+        <div class="footer-menu p-b10">
+          <ul class="list-inline footer-social text-center m-b0">
+            <li><a href="javascript:void(0);" class="fa fa-facebook"></a></li>
+            <li><a href="javascript:void(0);" class="fa fa-twitter"></a></li>
+            <li><a href="javascript:void(0);" class="fa fa-linkedin"></a></li>
+            <li><a href="javascript:void(0);" class="fa fa-google-plus"></a></li>
+          </ul>
+          <p class="copyright">©Copyright 2020</p>
+          <p class="copyright-text">Design With By <span>@LeMesssi</span></p>
+        </div>
+      </div>
     </div>
-  </nav>

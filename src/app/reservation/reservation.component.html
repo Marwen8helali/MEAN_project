@@ -1,0 +1,96 @@
+			<!-- inner page banner -->
+			<div class="dlab-bnr-inr overlay-black-light" style="background-image:url(/assets/images/banner/bnr1.jpg); background-position: bottom right;">
+				<div class="container">
+					<div class="dlab-bnr-inr-entry">
+						<h1 class="text-white">reservation</h1>
+						<p class="sub-title">CafeZone CAFE & RESTAURANT</p>
+					</div>
+				</div>
+			</div>
+			<!-- inner page banner END -->
+			<!-- Reservation Form -->
+			<div class="section-full content-inner bg-pink-light">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6 m-b30  align-self-center ">
+							<div class="contact-form">
+								<div class="section-head full-head text-center">
+									<h2 class="main-title text-primary">Need a reservation?</h2>
+									<h3 class="title">BOOK A TABLE </h3>
+									<div class="dlab-separator"></div>
+								</div>
+								<div class="dzFormMsg"></div>
+								<form method="post" class="dzForm" action="script/contact.php">
+									<input type="hidden" value="Contact" name="dzToDo" >
+									<div class="row sp5">
+										<div class="col-md-12">
+											<div class="form-group">
+												<div class="input-group">
+													<input name="dzName" type="text" required class="form-control" placeholder="Your Name">
+												</div>
+											</div>
+										</div>
+										<div class="col-md-12">
+											<div class="form-group">
+												<div class="input-group"> 
+													<input name="dzEmail" type="email" class="form-control" required  placeholder="Your Email Id" >
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6 col-md-6 col-sm-6">
+											<div class="form-group">
+												<select>
+													<option>First Choice</option>
+													<option>Second Choice</option>
+													<option>Third Choice</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-md-6 col-md-6 col-sm-6">
+											<div class="form-group">
+												<select>
+													<option>First Choice</option>
+													<option>Second Choice</option>
+													<option>Third Choice</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-md-12">
+											<div class="form-group">
+												<div class="input-group">
+													<textarea name="dzMessage" rows="4" class="form-control" required placeholder="Your Message..."></textarea>
+												</div>
+											</div>
+										</div>
+										<div class="col-lg-12">
+											<div class="form-group">
+												<div class="input-group">
+													<div class="g-recaptcha" data-sitekey="6LefsVUUAAAAADBPsLZzsNnETChealv6PYGzv3ZN" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
+													<input class="form-control d-none" style="display:none;" data-recaptcha="true" required data-error="Please complete the Captcha">
+												</div>
+											</div>
+										</div>
+										<div class="col-md-12">
+											<button name="submit" type="submit" value="Submit" class="btn btn-block bg-secondry"> <span>Submit</span> </button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>	
+						<div class="col-lg-6 m-b30">
+							<div class="row sp15 h-100">
+								<div class="col-lg-6 col-md-6 col-6">
+									<img class="radius-sm img-cover" src="/assets/images/about/pic2.jpg" alt="">
+								</div>
+								<div class="col-lg-6 col-md-6 col-6">
+									<img class="radius-sm img-cover" src="/assets/images/about/pic3.jpg" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Reservation Form END -->
+			
+        <script src='https://www.google.com/recaptcha/api.js'></script> <!-- Google API For Recaptcha  -->
+

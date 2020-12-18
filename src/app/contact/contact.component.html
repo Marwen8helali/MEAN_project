@@ -1,29 +1,117 @@
-<div class="container contact-form">
-    <div class="contact-image">
-        <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact"/>
-    </div>
-    <form [formGroup]="message" (ngSubmit)="onSubmitForm()">
-        <h3>Drop Us a Message</h3>
-       <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <input type="text" formControlName="Name" id="Name" class="form-control" placeholder="Your Name *" value="" />
-                </div>
-                <div class="form-group">
-                    <input type="text" formControlName="Email" id="Email" class="form-control" placeholder="Your Email *" value="" />
-                </div>
-                <div class="form-group">
-                    <input type="text" formControlName="phone" id="phone" class="form-control" placeholder="Your Phone Number *" value="" />
-                </div>
-                <div class="form-group">
-                    <input type="submit"  class="btnContact" value="Send Message" />
+
+            <!-- inner page banner -->
+            <div class="dlab-bnr-inr overlay-black-light" style="background-image:url(/assets/images/banner/bnr1.jpg); background-position: bottom right;">
+                <div class="container">
+                    <div class="dlab-bnr-inr-entry">
+                        <h1 class="text-white">CONTACT US</h1>
+                        <p class="sub-title">CafeZone cafe & restaurant</p>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <textarea formControlName="message" id="message" class="form-control" placeholder="Your Message *" style="width: 100%; height: 150px;"></textarea>
+            <!-- inner page banner END -->
+            <!-- Contact Form -->
+            <div class="section-full content-inner bg-pink-light">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12 m-b30 align-self-center">
+                            <div class="contact-form">
+                                <div class="section-head full-head text-center">
+                                    <h2 class="main-title text-primary">Have a question?</h2>
+                                    <h3 class="title">MAIL US</h3>
+                                    <div class="dlab-separator"></div>
+                                </div>
+                                <div class="dzFormMsg"></div>
+                                <form method="post" class="dzForm" action="script/contact.php">
+                                    <input type="hidden" value="Contact" name="dzToDo" >
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <input name="dzName" type="text" required class="form-control" placeholder="Your Name">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <div class="input-group"> 
+                                                    <input name="dzEmail" type="email" class="form-control" required  placeholder="Your Email Id" >
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <input name="dzOther[Phone]" type="text" required class="form-control" placeholder="Phone">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <textarea name="dzMessage" rows="4" class="form-control" required placeholder="Your Message..."></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <div class="g-recaptcha" data-sitekey="6LefsVUUAAAAADBPsLZzsNnETChealv6PYGzv3ZN" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
+                                                    <input class="form-control d-none" style="display:none;" data-recaptcha="true" required data-error="Please complete the Captcha">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <button name="submit" type="submit" value="Submit" class="btn btn-block bg-secondry"> <span>Submit</span> </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>  
+                        <div class="col-lg-6 col-md-12 m-b30">
+                            <div class="contact-reserve text-white text-uppercase">
+                                <img class="img-cover" src="/assets/images/about/pic1.jpg" alt="">
+                                <div class="contact-text">
+                                    <h2 class="title">Need a table?</h2>
+                                    <h6 class="sub-title">Make your reservation online!</h6>
+                                    <a href="#" class="btn">Reserve now!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </form>
-</div>
+            <!-- Contact Form END -->
+            <!-- Contact Info -->
+            <div class="section-full content-inner-2">
+                <div class="container">
+                    <div class="row sp0 contact-box align-items-center">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="section-head full-head text-center">
+                                <h2 class="main-title text-primary">Our location</h2>
+                                <h3 class="title">VISIT US!</h3>
+                                <div class="dlab-separator"></div>
+                                <p class="m-b0">We are located next to Green House Club. 8901 Marmora Road Chi Minh City, Vietnam</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14443.076073250879!2d75.8417313!3d25.177276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1577358063715!5m2!1sen!2sin" style="border:0; height: 300px; width: 100%; margin-bottom: -5px;" allowfullscreen=""></iframe>
+                        </div>
+                    </div>
+                    <div class="row sp0 contact-box contact-box-reversed">
+                        <div class="col-lg-6 col-md-6">
+                            <img src="/assets/images/our-services/pic1.jpg" class="img-cover" alt="">
+                        </div>
+                        <div class="col-lg-6 col-md-6 align-self-center">
+                            <div class="section-head full-head text-center">
+                                <h2 class="main-title text-primary">Have a question?</h2>
+                                <h3 class="title">CONTACT US</h3>
+                                <div class="dlab-separator"></div>
+                                <p class="m-b0">Call us: +0 123 456 7890</p>
+                                <p class="m-b0">Mail us: info@example.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Contact Info End -->
+          

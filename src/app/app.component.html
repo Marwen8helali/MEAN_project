@@ -1,5 +1,42 @@
-<app-navbar></app-navbar>
- 
-<router-outlet></router-outlet>
+<div class="page-wraper">
+    <div id="loading-area"></div>
+      <!-- header -->
+      <header class="site-header header dark d-block d-md-none">
+          <!-- main header -->
+          <div class="sticky-header main-bar-wraper navbar-expand-lg">
+              <div class="main-bar clearfix">
+                  <div class="container-fluid clearfix">
+                      <!-- website logo -->
+                      <div class="logo-header">
+                          <a href="index.html"><img src="images/logo-2.png" alt=""></a>
+                      </div>
+                      <!-- extra nav -->
+                      <div class="extra-nav">
+                          <div class="extra-cell">
+                              <ul class="header-social">
+                                  <li><a href="javascript:void(0);" class="openbtn navicon"><span></span><span></span><span></span></a></li>
+                              </ul>
+                          </div>
+                      </div>
+                   </div>
+              </div>
+          </div>
+          <!-- main header END -->
+      </header>
+      <!-- header END -->
+      <!-- Content -->
+      <div class="page-content one-page-layout">
+          <!-- Side Nav -->
+          <app-navbar></app-navbar>
+          <!-- Side Nav End-->
+          <div id="main" class="">
+              
+             <router-outlet></router-outlet>
+             <app-footer></app-footer>
   
-<app-footer></app-footer>
+              <!-- Footer END -->
+          </div>
+      </div>
+      <!-- Content END -->
+  </div>
+  
